@@ -13,3 +13,13 @@ If you are a CS Falcon NGAV shop, you can run the following CS Splunk query to i
 | stats values(plugin_id) as "ChromePlugins" by aid
 | lookup aid_master aid
 ```
+# Install
+```commandline
+$ pip install -r requirements.txt
+```
+
+# Execution
+Note, the script is expecting 'plugin_id' as the column value for Chrome extension ID.
+```command-line
+$ python chrome_plugin_lookup.py plugins_ids_input.csv mapped_chrome_plugins_output.csv
+```
